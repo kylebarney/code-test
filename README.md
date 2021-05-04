@@ -7,6 +7,12 @@
 5. Run `./vendor/bin/sail up -d` (This repository uses Docker and Laravel Sail for a quick setup. You can run it on another environment, but you'll need to configure it yourself. *Note for Windows users: This project will run much faster if you clone and run this solely within the WSL environment instead of running it off of the Windows filesystem mounted into WSL.*)
 6. `exec` into the Docker container running Laravel and run `vendor/bin/phpunit` to execute the tests that hit the API.
 
+# Project Requirements
+
+- Create a simple RESTful API written in Laravel/PHP.
+- The project contains **users** and **products**. A user will have the ability to add & remove products.
+- Specific requirements follow after the details `Project and Key File Overview` below.
+
 # Project and Key File Overview
 
 This project uses Laravel Sanctum to provide a lightweight authentication scheme for API requests.
@@ -20,11 +26,6 @@ User registration is outside the scope of this project.
 - `app/Models/User` and `app/Models/Product` => Contain the Eloquent ORM models along with their relations and other attributes.
 - `database/migrations/` => Contains the database migrations for this project.
 - `tests/Feature/ProductsControllerTest.php` => Contains tests for the products controllers, covering authentication, validation, file uploads, etc.
-
-# Project Requirements
-
-- Create a simple RESTful API written in Laravel/PHP.
-- The project contains **users** and **products**. A user will have the ability to add & remove products.
 
 ## Users
 
